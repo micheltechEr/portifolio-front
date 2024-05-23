@@ -2,7 +2,7 @@
     const header = ()=>{
         return(    
         <header class="portifolio-header">
-        <ul>
+        <ul className='flex'>
             <li>
                 <a>PROJETOS PESSOAIS</a>
             </li>
