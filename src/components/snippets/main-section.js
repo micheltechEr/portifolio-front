@@ -5,7 +5,7 @@ const mainsection= ()=>{
             <div className="main-section flex">
             <div className="main-info flex">
                 <h1>Ângelo Miguel</h1>
-                <h2>Desenvolvedor <span>Front-End</span></h2>
+                <h2>Desenvolvedor <span>&#123;Front-End&#125;</span></h2>
                 <a href="#" className="button contact">&lt;CONTATO/&gt;</a>
             </div>
             <div className="banner-home flex">
