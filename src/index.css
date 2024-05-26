@@ -1,5 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+  --primary-color:#000;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:1;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:0;width:0px;}
+    100% {opacity:1;}
+}
+
+
 body{
 	margin: 0;
   font-family: "Roboto Condensed", sans-serif;
@@ -9,12 +35,18 @@ body{
   display: flex;
 }
 
+.project-content{
+  width: 100%;
+  overflow-x: hidden;
+}
+
 header.portifolio-header {
   overflow: hidden;
   position: relative;
   top: 0;
   width: 100%;
 }
+
 
 header.portifolio-header ul {
     list-style: none;
@@ -41,6 +73,7 @@ header.portifolio-header ul {
   width: 59%;
   height: 100%;
   border-radius: 2%;
+  animation:reveal 3s normal;
 }
 
 .main-info.flex {
@@ -51,6 +84,7 @@ header.portifolio-header ul {
   font-weight: bold;
   font-size: 4rem;
   line-height: 0rem;
+  animation:slidein 7s normal ;
 }
 
 a.button.contact {
@@ -67,4 +101,61 @@ a.button.contact {
 .main-info.flex h2 {
   font-weight: 400;
   font-size: 2rem;
+  animation:showup 7s normal;
+}
+
+.main-info.flex h2 span {
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(99deg, #000 0%, #ffd701 100%);
+  color: transparent;
+  font-weight: bold;
+}
+@media (min-width:768px) {
+  header.portifolio-header-mobile{
+    display: none;
+  }
+  .portifolio-header-mobile {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px; 
+    transition: 0.5s; 
+  }
+}
+@media (min-width:768px)  and (max-width:1200px){
+  .main-info.flex h2{
+    font-size: 1.6rem;
+  }
+  .main-info.flex h1{
+    font-size:3rem;  
+  }
+}
+
+@media(max-width:768px){
+  .portifolio-header{
+    display: none;
+  }
+  .main-info.flex h1{
+    font-size:2rem ;
+  }
+  .main-info.flex h2{
+    font-size: 1rem;
+  }
+  a.button.contact {
+    width: 70px;
+    padding: 10px;
+    font-size: 0.60rem;
+    font-weight: bold;
+    margin-bottom: 5%;
+  }
+  .banner-home img{
+    width: 100%;
+    border-radius: 15px;
+  }
 }
