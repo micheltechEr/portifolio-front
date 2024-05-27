@@ -7,7 +7,7 @@ import ContactMe from "./snippets/contact-me";
 
 const BodyProject = ()=>{
     return(
-        <div className="body-project">
+        <div className="body-project shadowEffect">
             <MainSection />
             <PersonalProjects/>
             <CurriculumSection />
