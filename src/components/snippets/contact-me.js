@@ -2,7 +2,7 @@ import React from "react";
 import contact from '../../img/contact.png'
 const ContactMe = ()=>{
     return(
-        <div className="contact-me">
+        <div className="contact-me" id="contact-me">
             <h2>Contato</h2>
             <div className="box-contact">
                 <img src={contact} alt="contact-info"/>

@@ -4,16 +4,16 @@
         <header class="portifolio-header">
         <ul className='flex'>
             <li>
-                <a>PROJETOS PESSOAIS</a>
+                <a href='#personal-projects'>PROJETOS PESSOAIS</a>
             </li>
             <li>
-                <a>PORTIFÓLIO</a>
+                <a href='#curriculum-section'>PORTIFÓLIO</a>
             </li>
             <li>
-                <a>SOBRE</a>
+                <a href='#about-me-text'>SOBRE</a>
             </li>
             <li>
-                <a>CONTATO</a>
+                <a href='#contact-me'>CONTATO</a>
             </li>
         </ul>
     </header>)

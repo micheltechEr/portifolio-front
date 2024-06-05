@@ -6,7 +6,7 @@ const mainsection= ()=>{
             <div className="main-info flex">
                 <h1>Ângelo Miguel</h1>
                 <h2>Desenvolvedor <span>&#123;Front-End&#125;</span></h2>
-                <a href="#" className="button contact">&lt;CONTATO/&gt;</a>
+                <a href="https://www.linkedin.com/in/angelo-miguel-rib-cerq/" target="_blank" className="button contact">&lt;CONTATO/&gt;</a>
             </div>
             <div className="banner-home flex">
                 <img src={bannerhome} alt="banner-home"/>

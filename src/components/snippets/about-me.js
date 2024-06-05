@@ -4,7 +4,7 @@ import profilecurriculum from '../../img/profile-curriculum.jpg'
 const AboutMe = ()=>{
     return(
         <div className="about-me">
-            <div className="about-me-text">
+            <div className="about-me-text" id="about-me-text">
                 <h2>Sobre mim</h2>
                 <h4>
                 E aí, galera!
