@@ -122,6 +122,39 @@ a.button.contact {
   color: transparent;
   font-weight: bold;
 }
+
+.group-projects .item >span{
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(99deg, #000 0%, #ffd701 100%);
+  color: transparent;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 4rem;
+}
+
+.box-section .group-projects {
+  display: flex;
+  align-items: center;
+}
+
+.group-projects .item {
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.personal-projects > h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width:768px) {
   header.portifolio-header-mobile{
     display: none;
@@ -198,5 +231,8 @@ a.button.contact {
 .shadowOn{
   opacity: 0.8;
   background: #000;
+}
+.box-section .group-projects{
+  flex-wrap: wrap;
 }
 }
