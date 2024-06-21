@@ -39,8 +39,6 @@ body{
   visibility: visible !important;
 }
 
-
-
 .project-content{
   width: 100%;
   overflow-x: hidden;
@@ -155,11 +153,47 @@ a.button.contact {
   flex-direction: column;
 }
 
+.project-image img{
+  transition: transform 1s ease;
+
+}
+
+.project-image img:hover{
+  transform: scale(1.1);
+}
+#curriculum-section {
+  display: flex;
+  justify-content: center;
+}
+
+#curriculum-section .box-description {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding-right: 8%;
+  justify-content: center;
+}
+
+#curriculum-section .box-description > h2 {
+  font-size: 3rem;
+}
+
+#curriculum-section .box-description > h3 {
+  font-weight: 400;
+}
+
+#curriculum-section .box-image{
+width: 50%;
+}
+.curriculum-section .box-image img {
+  width: 100%;
+}
+
+
 @media (min-width:768px) {
   header.portifolio-header-mobile{
     display: none;
   }
-
 }
 @media (min-width:768px)  and (max-width:1200px){
   .main-info.flex h2{
@@ -235,4 +269,19 @@ a.button.contact {
 .box-section .group-projects{
   flex-wrap: wrap;
 }
+#curriculum-section{
+  flex-direction: column;
+  align-items: center;
+}
+
+#curriculum-section .box-description{
+  width: 50%;
+}
+#curriculum-section .box-description > h2{
+  text-align: center;
+}
+#curriculum-section .box-description > h3{
+  text-align: justify;
+}
+
 }
