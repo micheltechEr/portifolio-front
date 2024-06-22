@@ -1,5 +1,6 @@
 import React from "react";
 import curriculumimage from '../../img/curriculum.png'
+import { zoomImage } from "../../functions/main";
 const CurriculumSection = ()=>{
     return(
         <div className="curriculum-section" id="curriculum-section">
@@ -10,8 +11,10 @@ const CurriculumSection = ()=>{
                 de habilidades.
             </h3>
             </div>
+            <span className="hidden_box">&#123;Clique aqui para ampliar a imagem&#125;</span>
+            {zoomImage()}
             <div className="box-image">
-                <img src={curriculumimage} alt="curriculum-image" />
+                <img src={curriculumimage} className="curriculum-image" alt="Imagem do curriculo" />
             </div>
         </div>
     )

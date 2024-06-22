@@ -25,7 +25,6 @@
     100% {opacity:1;}
 }
 
-
 body{
 	margin: 0;
   font-family: "Roboto Condensed", sans-serif;
@@ -187,11 +186,12 @@ width: 50%;
 }
 .curriculum-section .box-image img {
   width: 100%;
+  transition: transform 1s ease;
 }
 
 
 @media (min-width:768px) {
-  header.portifolio-header-mobile{
+  header.portifolio-header-mobile,.hidden_box{
     display: none;
   }
 }
@@ -227,11 +227,11 @@ width: 50%;
   }
   .toggle-burger svg {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 46px;
+    height: 100%;
     fill: #000;
-    stroke: #000;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 .portifolio-header-mobile ul {
   height: 100%;
@@ -283,5 +283,20 @@ width: 50%;
 #curriculum-section .box-description > h3{
   text-align: justify;
 }
+.hidden_box{
+  -webkit-background-clip: text;
+  background-image: linear-gradient(99deg, #000 0%, #ffd701 100%);
+  color: transparent;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 3rem;
+}
 
+.curriculum-image.active-zoom{
+  transform: scale(1.5);
+  margin: 3rem 0 5rem 0;
+  }
+  .main-section.flex{
+    margin: 1rem;
+  }
 }

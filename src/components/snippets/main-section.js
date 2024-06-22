@@ -4,7 +4,7 @@ const mainsection= ()=>{
     return(
             <div className="main-section flex">
             <div className="main-info flex">
-                <h1>Ângelo Miguel</h1>
+                <h1 className="title">Ângelo Miguel</h1>
                 <h2>Desenvolvedor <span>&#123;Front-End&#125;</span></h2>
                 <a href="https://www.linkedin.com/in/angelo-miguel-rib-cerq/" target="_blank" className="button contact">&lt;CONTATO/&gt;</a>
             </div>
