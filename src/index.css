@@ -3,7 +3,18 @@
 
 :root{
   --primary-color:#000;
+  --background-menu-color:#FFF;
+  --background-project:#FFF;
+  --text-color:#000;
+  --text-menu-color:#000;
 }
+
+:root{
+  --background-project-dark:#000;
+  --text-color-dark:#FFF;
+}
+
+
 
 @keyframes showup {
     0% {opacity:0;}
@@ -25,18 +36,52 @@
     100% {opacity:1;}
 }
 
+
+html[site-mode="dark"] .body-project{
+  background: var(--background-project-dark);
+}
+
+html[site-mode="dark"] .main-info.flex h2 span {
+  background-image: linear-gradient(99deg, #FFF 0%, #ffd701 100%);
+}
+
+html[site-mode="dark"] .group-projects .item >span{
+  background-image: linear-gradient(99deg, #FFF 0%, #ffd701 100%);
+
+}
+
+html[site-mode="dark"] h1,
+html[site-mode="dark"] h2,
+html[site-mode="dark"] h3,
+html[site-mode="dark"] h4,
+html[site-mode="dark"] span,
+html[site-mode="dark"] p,
+html[site-mode="dark"] a {
+    color: var(--text-color-dark);
+}
+
+html:not([site-mode="dark"]) h1,
+html:not([site-mode="dark"]) h2,
+html:not([site-mode="dark"]) h3,
+html:not([site-mode="dark"]) h4,
+html:not([site-mode="dark"]) span,
+html:not([site-mode="dark"]) p,
+html:not([site-mode="dark"]) a {
+    color: var(--text-color);
+}
+
+
 body{
 	margin: 0;
   font-family: "Roboto Condensed", sans-serif;
 }
 
+
 .flex{
   display: flex;
 }
 
-.active{
-  visibility: visible !important;
-}
+
 
 .project-content{
   width: 100%;
@@ -45,9 +90,11 @@ body{
 
 header.portifolio-header {
   overflow: hidden;
-  position: relative;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
+  background-color: var(--background-menu-color);
 }
 
 
@@ -56,13 +103,32 @@ header.portifolio-header ul {
     justify-content: space-around;
 }
 
+header.portifolio-header ul li::after{
+  content: '';
+	display: block;
+	margin: auto;
+	height: 3px;
+	width: 0px;
+	background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+header.portifolio-header ul li:hover::after{
+  width: 100%;
+  background: #ffd701;
+}
+
 header.portifolio-header ul li a {
   text-decoration: none;
-  color: #000;
+  color: var(--text-menu-color);
 }
 
 .body-project {
   padding: 100px 30px 0px 30px;
+}
+
+.body-project > div:not(:last-child) {
+  margin-bottom: 4rem;
 }
 
 .banner-home{
@@ -101,7 +167,6 @@ a.button.contact {
   width: 150px;
   border-radius: 10.20px;
   text-align: center;
-  color: #000;
   text-decoration: none;
   font-family: 'Roboto',sans-serif;
 }
@@ -189,6 +254,67 @@ width: 50%;
   transition: transform 1s ease;
 }
 
+.about-me {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+div#about-me-text {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding-right: 8%;
+  justify-content: center;
+}
+
+div#about-me-text h3{
+  font-weight: 400;
+}
+
+div#about-me-text h2{
+  font-size: 3rem;
+}
+
+.about-me-image {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.about-me-image img{
+  width: 40%;
+  border-radius: 6%;
+}
+
+div#contact-me {
+  display: flex;
+  justify-content: center;
+}
+
+
+.box-contact {
+  width: 70%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-me h2 {
+  font-size: 2rem;
+}
+
+.box-contact img {
+  width: 40%;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
 
 @media (min-width:768px) {
   header.portifolio-header-mobile,.hidden_box{
@@ -233,6 +359,7 @@ width: 50%;
     cursor: pointer;
     margin-bottom: 1rem;
 }
+
 .portifolio-header-mobile ul {
   height: 100%;
   width: 30%;
@@ -247,9 +374,18 @@ width: 50%;
   background-color: #FFF;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.5s;
   list-style: none;
+  transition: transform 0.3s ease, visibility 0s linear 0.3s; /* Add transition for visibility */
+  transform: translateX(-100%);
 }
+
+.portifolio-header-mobile ul.active {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.3s ease; /* Reset transition for visibility */
+
+}
+
 .portifolio-header-mobile ul li {
   padding: 10px 0 10px 0;
   font-size: 0.8rem;
@@ -264,7 +400,6 @@ width: 50%;
 
 .shadowOn{
   opacity: 0.8;
-  background: #000;
 }
 .box-section .group-projects{
   flex-wrap: wrap;
@@ -299,4 +434,32 @@ width: 50%;
   .main-section.flex{
     margin: 1rem;
   }
+  .about-me{
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me #about-me-text{
+    width: 50%;
+  }
+  .about-me-image{
+    justify-content: center;
+    width: 100%;
+  }
+  .about-me-image img {
+    width: 40%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+  div#contact-me{
+    flex-direction: column;
+    align-items: center;
+  }
+  .box-contact{
+    justify-content: center;
+  }
+  .box-contact img {
+    width: 100%;
+  }
 }
+
