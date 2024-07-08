@@ -1,8 +1,10 @@
 import React from "react";
+import { forwardRef } from 'react';
+
 import bannerhome from '../../img/banner-home.jpg'
-const mainsection= ()=>{
+const mainsection= forwardRef((props, ref) =>{
     return(
-            <div className="main-section flex">
+            <div className="main-section flex" ref={ref}>
             <div className="main-info flex">
                 <h1 className="title">Ângelo Miguel</h1>
                 <h2>Desenvolvedor <span>&#123;Front-End&#125;</span></h2>
@@ -13,5 +15,5 @@ const mainsection= ()=>{
             </div>
             </div>
     )
-}
+})
 export default mainsection

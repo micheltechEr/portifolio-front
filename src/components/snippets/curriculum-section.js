@@ -1,9 +1,11 @@
 import React from "react";
 import curriculumimage from '../../img/curriculum.png'
 import { zoomImage } from "../../functions/main";
-const CurriculumSection = ()=>{
+import { forwardRef } from 'react';
+
+const CurriculumSection = forwardRef((props,ref)=>{
     return(
-        <div className="curriculum-section" id="curriculum-section">
+        <div className="curriculum-section section" id="curriculum-section" ref={ref}>
             <div className="box-description">
             <h2>Portifólio & Curriculo</h2>
             <h3>Aqui listei minha formação acadêmica e minhas habilidades técnicas.
@@ -18,5 +20,5 @@ const CurriculumSection = ()=>{
             </div>
         </div>
     )
-}
+})
 export default CurriculumSection

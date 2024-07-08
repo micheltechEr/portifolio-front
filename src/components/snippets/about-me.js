@@ -1,9 +1,10 @@
 import React from "react";
 import profilecurriculum from '../../img/profile-curriculum.jpg'
+import { forwardRef } from 'react';
 
-const AboutMe = ()=>{
+const AboutMe = forwardRef((props,ref)=>{
     return(
-        <div className="about-me">
+        <div className="section about-me" ref={ref}>
             <div className="about-me-text" id="about-me-text">
                 <h2>Sobre mim</h2>
                 <h3>
@@ -16,6 +17,6 @@ const AboutMe = ()=>{
             </div>
         </div>
     )
-}
+})
 
 export default AboutMe

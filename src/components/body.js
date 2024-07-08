@@ -5,14 +5,23 @@ import CurriculumSection from '../components/snippets/curriculum-section';
 import AboutMe from "../components/snippets/about-me";
 import ContactMe from "./snippets/contact-me";
 
+import withIntersectionObserver from '../functions/infinity-effect';
+
+const ObservedMainSection = withIntersectionObserver(MainSection);
+const ObservedPersonalProjects = withIntersectionObserver(PersonalProjects);
+const ObservedCurriculumSection = withIntersectionObserver(CurriculumSection);
+const ObservedAboutMe = withIntersectionObserver(AboutMe);
+const ObservedContactMe = withIntersectionObserver(ContactMe);
+
+
 const BodyProject = ()=>{
     return(
         <div className="body-project shadowEffect">
-            <MainSection />
-            <PersonalProjects/>
-            <CurriculumSection />
-            <AboutMe/>
-            <ContactMe />
+            <ObservedMainSection />
+            <ObservedPersonalProjects/>
+            <ObservedCurriculumSection />
+            <ObservedAboutMe/>
+            <ObservedContactMe />
         </div>
     )
 }

@@ -2,9 +2,11 @@ import React from "react";
 import APODImage from '../../img/apod.png'
 import NetflixClone from '../../img/netflix-code.png'
 import ForBarber from '../../img/forbarber.png'
-const ProjectSection = ()=>{
+import { forwardRef } from 'react';
+
+const ProjectSection = forwardRef((props,ref)=>{
     return(
-        <div className="personal-projects" id="personal-projects">
+        <div className="section personal-projects" id="personal-projects" ref={ref}>
             <h2>
                 Projetos Pessoais
                 <span className="arrows">&larr;	&rarr;</span>
@@ -41,6 +43,6 @@ const ProjectSection = ()=>{
             </div>
         </div>
     )
-}
+})
 
 export default ProjectSection
