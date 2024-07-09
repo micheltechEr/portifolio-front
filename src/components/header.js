@@ -1,4 +1,5 @@
     import React from 'react'
+    import SwitchToggle from './snippets/switchtoggle'
     const header = ()=>{
         return(    
         <header class="portifolio-header">
@@ -16,6 +17,7 @@
                 <a href='#contact-me'>CONTATO</a>
             </li>
         </ul>
+        <SwitchToggle/>
     </header>)
 
     }

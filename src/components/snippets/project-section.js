@@ -2,11 +2,12 @@ import React from "react";
 import APODImage from '../../img/apod.png'
 import NetflixClone from '../../img/netflix-code.png'
 import ForBarber from '../../img/forbarber.png'
-import { forwardRef } from 'react';
+import useIntersectionObserver from '../../functions/useInfiniteScroll'
+const ProjectSection = ()=>{
+    const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });
 
-const ProjectSection = forwardRef((props,ref)=>{
     return(
-        <div className="section personal-projects" id="personal-projects" ref={ref}>
+        <div  ref={sectionRef} className={`section${isVisible?"visible":""} personal-projects`} id="personal-projects">
             <h2>
                 Projetos Pessoais
                 <span className="arrows">&larr;	&rarr;</span>
@@ -43,6 +44,6 @@ const ProjectSection = forwardRef((props,ref)=>{
             </div>
         </div>
     )
-})
+}
 
 export default ProjectSection

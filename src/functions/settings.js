@@ -1,6 +1,5 @@
 const showMobileMenu = () => {
     window.addEventListener("load", function() {
-        // Function to show the mobile menu and shadow effect
         function showMenu() {
             document.querySelector('.portifolio-header-mobile ul').classList.add('active');
             document.querySelector('.shadowEffect').classList.add('shadowOn');

@@ -1,16 +1,18 @@
 import React from "react";
 import contact from '../../img/contact.png'
-import { forwardRef } from 'react';
+import useIntersectionObserver from '../../functions/useInfiniteScroll'
 
-const ContactMe = forwardRef((props,ref)=>{
+const ContactMe = ()=>{
+    const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });
+
     return(
-        <div className="section contact-me" id="contact-me" ref={ref}>
+        <div ref={sectionRef} className={`section${isVisible?"visible":""} contact-me`} id="contact-me">
             <h2>Contato</h2>
             <div className="box-contact">
                 <img src={contact} alt="contact-info"/>
             </div>
         </div>
     )
-})
+}
 
 export default ContactMe

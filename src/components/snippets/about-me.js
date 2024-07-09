@@ -1,10 +1,10 @@
 import React from "react";
 import profilecurriculum from '../../img/profile-curriculum.jpg'
-import { forwardRef } from 'react';
-
-const AboutMe = forwardRef((props,ref)=>{
+import useIntersectionObserver from '../../functions/useInfiniteScroll'
+const AboutMe = ()=>{
+    const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });
     return(
-        <div className="section about-me" ref={ref}>
+        <div ref={sectionRef} className={`section ${isVisible?"visible":""} about-me`} id="about-me">
             <div className="about-me-text" id="about-me-text">
                 <h2>Sobre mim</h2>
                 <h3>
@@ -16,7 +16,7 @@ const AboutMe = forwardRef((props,ref)=>{
                 <img src={profilecurriculum} alt="profile-picture-curriculum"/>
             </div>
         </div>
-    )
-})
+    )    
+}
 
 export default AboutMe

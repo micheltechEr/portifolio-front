@@ -1,11 +1,13 @@
 import React from "react";
 import curriculumimage from '../../img/curriculum.png'
-import { zoomImage } from "../../functions/main";
-import { forwardRef } from 'react';
+import { zoomImage } from "../../functions/settings";
+import useIntersectionObserver from '../../functions/useInfiniteScroll'
 
-const CurriculumSection = forwardRef((props,ref)=>{
+const CurriculumSection = ()=>{
+    const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });
+
     return(
-        <div className="curriculum-section section" id="curriculum-section" ref={ref}>
+        <div ref={sectionRef} className={`section${isVisible?"visible":""} curriculum-section`} id="curriculum-section">
             <div className="box-description">
             <h2>Portifólio & Curriculo</h2>
             <h3>Aqui listei minha formação acadêmica e minhas habilidades técnicas.
@@ -20,5 +22,5 @@ const CurriculumSection = forwardRef((props,ref)=>{
             </div>
         </div>
     )
-})
+}
 export default CurriculumSection
