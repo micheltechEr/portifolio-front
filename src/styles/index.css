@@ -6,13 +6,13 @@
   --background-menu-color:#FFF;
   --background-project:#FFF;
   --text-color:#000;
-  --text-menu-color:#000;
 }
 
 :root{
   --background-project-dark:#000;
   --text-color-dark:#FFF;
 }
+
 
 
 
@@ -47,29 +47,7 @@ html[site-mode="dark"] .main-info.flex h2 span {
 
 html[site-mode="dark"] .group-projects .item >span{
   background-image: linear-gradient(99deg, #FFF 0%, #ffd701 100%);
-
 }
-
-html[site-mode="dark"] h1,
-html[site-mode="dark"] h2,
-html[site-mode="dark"] h3,
-html[site-mode="dark"] h4,
-html[site-mode="dark"] span,
-html[site-mode="dark"] p,
-html[site-mode="dark"] a {
-    color: var(--text-color-dark);
-}
-
-html:not([site-mode="dark"]) h1,
-html:not([site-mode="dark"]) h2,
-html:not([site-mode="dark"]) h3,
-html:not([site-mode="dark"]) h4,
-html:not([site-mode="dark"]) span,
-html:not([site-mode="dark"]) p,
-html:not([site-mode="dark"]) a {
-    color: var(--text-color);
-}
-
 
 body{
 	margin: 0;
@@ -80,8 +58,6 @@ body{
 .flex{
   display: flex;
 }
-
-
 
 .project-content{
   width: 100%;
@@ -95,12 +71,17 @@ header.portifolio-header {
   width: 100%;
   z-index: 1;
   background-color: var(--background-menu-color);
+  transition: background-color 0.3s ease;
 }
 
+html[site-mode="dark"] header.portifolio-header{
+  background-color: var(--background-project-dark);
+}
 
 header.portifolio-header ul {
     list-style: none;
     justify-content: space-around;
+    padding: 1rem;
 }
 
 header.portifolio-header ul li::after{
@@ -113,18 +94,19 @@ header.portifolio-header ul li::after{
   transition: width .5s ease, background-color .5s ease;
 }
 
-header.portifolio-header ul li:hover::after{
+header.portifolio-header ul li:not(:last-child):hover::after{
   width: 100%;
   background: #ffd701;
 }
 
 header.portifolio-header ul li a {
   text-decoration: none;
-  color: var(--text-menu-color);
+  font-weight: 500;
 }
 
 .body-project {
-  padding: 100px 30px 0px 30px;
+  padding: 130px 30px 0px 30px;
+  transition: background 0.8s ease;
 }
 
 .body-project > div:not(:last-child) {
@@ -315,6 +297,7 @@ div#contact-me {
   width: 100%;
   display: flex;
   justify-content: center;
+  background: var(--background-project-dark);
 }
 
 .section {
@@ -478,3 +461,30 @@ div#contact-me {
   }
 }
 
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: revert-layer !important;
+}
+
+.project-content div > *  {
+  box-sizing: revert !important;
+}
+
+html[site-mode="dark"] h1,
+html[site-mode="dark"] h2,
+html[site-mode="dark"] h3,
+html[site-mode="dark"] h4,
+html[site-mode="dark"] span,
+html[site-mode="dark"] p,
+html[site-mode="dark"] a {
+    color: var(--text-color-dark);
+}
+
+html:not([site-mode="dark"]) h1,
+html:not([site-mode="dark"]) h2,
+html:not([site-mode="dark"]) h3,
+html:not([site-mode="dark"]) h4,
+html:not([site-mode="dark"]) span,
+html:not([site-mode="dark"]) p,
+html:not([site-mode="dark"]) a {
+    color: var(--text-color);
+}

@@ -16,8 +16,10 @@
             <li>
                 <a href='#contact-me'>CONTATO</a>
             </li>
+            <li>
+            <SwitchToggle/>
+            </li>
         </ul>
-        <SwitchToggle/>
     </header>)
 
     }
