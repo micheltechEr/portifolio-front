@@ -4,7 +4,7 @@ import { zoomImage } from "../../functions/settings";
 import useIntersectionObserver from '../../functions/useInfiniteScroll'
 
 const CurriculumSection = ()=>{
-    const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });
+    const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.3 });
 
     return(
         <div ref={sectionRef} className={`section${isVisible?"visible":""} curriculum-section`} id="curriculum-section">

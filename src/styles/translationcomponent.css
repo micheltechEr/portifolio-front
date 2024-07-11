@@ -1,0 +1,20 @@
+.choose-language{
+background-image: none !important;
+padding: .375rem 2.25rem .375rem 2.25rem !important;
+cursor: pointer;
+}
+
+html[site-mode="dark"] .choose-language option{
+    background: var(--background-project-dark);
+}
+
+html[site-mode="dark"] .choose-language:focus{
+    outline: none !important;
+    border-color: #d3d3d3 !important;
+    box-shadow: 0 0 0 0.08rem #ffd701;
+}
+
+html[site-mode="dark"] .choose-language {
+    background-color: transparent;
+    color: var(--text-color-dark);
+}

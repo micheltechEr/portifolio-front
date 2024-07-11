@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-// Custom hook to handle dark mode logic
 const useDarkMode = () => {
   const [isChecked, setIsChecked] = useState(() => {
     return localStorage.getItem('site-mode') === 'dark';
