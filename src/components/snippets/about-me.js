@@ -2,7 +2,6 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import profilecurriculum from '../../img/profile-curriculum.jpg';
 import useIntersectionObserver from '../../functions/useInfiniteScroll';
-
 const AboutMe = () => {
   const { t } = useTranslation();
   const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });

@@ -1,23 +1,20 @@
 const showMobileMenu = () => {
     window.addEventListener("load", function() {
-        function showMenu() {
+        const showMenu = ()=>{
             document.querySelector('.portifolio-header-mobile ul').classList.add('active');
             document.querySelector('.shadowEffect').classList.add('shadowOn');
             document.querySelector('.toggle-burger').style.display = 'none';
         }
     
-        function hideMenu() {
+        const hideMenu = ()=>{
             let menu = document.querySelector('.portifolio-header-mobile ul');
             menu.classList.remove('active');
                 document.querySelector('.shadowEffect').classList.remove('shadowOn');
                 document.querySelector('.toggle-burger').style.display = 'block';
         }
-    
         document.querySelector('.toggle-burger svg').addEventListener('click', showMenu);
         document.querySelector('.shadowEffect').addEventListener('click', hideMenu);
     });
-
-    
 };
 
 const zoomImage = () => {

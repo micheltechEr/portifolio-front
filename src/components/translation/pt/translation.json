@@ -1,4 +1,28 @@
 {
+  "menu":{
+    "personal-projects":"PROJETOS PESSOAIS",
+    "portifolio":"PORTIFOLIO",
+    "about":"SOBRE",
+    "contact":"CONTATO"
+  },
+  "subtitle":{
+    "developer":"Desenvolvedor",
+     "stack":"Front-End"
+  },
+  "buttonText":{
+    "text":"CONTATO"
+  },
+  "personalProjects":{
+    "personalProjectsText":"PROJETOS PESSOAIS"
+  },
+
+  "portifolioL":{
+    "portifolio":"Portifólio",
+    "curriculum":"Curriculo",
+    "description":"Aqui listei minha formação acadêmica e minhas habilidades técnicas. A medida que aprimoro, adiciono novos “objetos” de habilidades.",
+    "changeImageText":"Clique aqui para aumentar a imagem"
+  },
+
     "aboutMe": {
       "title": "Sobre mim",
       "greeting": "E aí, galera!",

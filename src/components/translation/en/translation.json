@@ -1,4 +1,29 @@
 {
+  "menu":{
+      "personal-projects":"PERSONAL PROJECTS",
+      "portifolio":"PORTIFOLIO",
+      "about":"ABOUT",
+      "contact":"CONTACT"
+    },
+
+    "subtitle":{
+    "developer":"Developer",
+     "stack":"Front-End"
+  },
+  "buttonText":{
+    "text":"CONTACT"
+  },
+
+  "personalProjects":{
+    "personalProjectsText":"PERSONAL PROJECTS"
+  },
+
+  "portifolioL":{
+    "portifolio":"Portifolio",
+    "curriculum":"Curriculum",
+    "description":"Here, I have listed my academic background and technical skills. As I improve, I add new skill 'objects'"
+  },
+    
     "aboutMe": {
       "title": "About Me",
       "greeting": "Hello, everyone!",

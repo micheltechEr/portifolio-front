@@ -3,13 +3,16 @@ import APODImage from '../../img/apod.png'
 import NetflixClone from '../../img/netflix-code.png'
 import ForBarber from '../../img/forbarber.png'
 import useIntersectionObserver from '../../functions/useInfiniteScroll'
+import { useTranslation } from 'react-i18next';
+
 const ProjectSection = ()=>{
     const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });
+    const {t} = useTranslation()
 
     return(
         <div  ref={sectionRef} className={`section${isVisible?"visible":""} personal-projects`} id="personal-projects">
             <h2>
-                Projetos Pessoais
+                {t('personalProjects.personalProjectsText')}
                 <span className="arrows">&larr;	&rarr;</span>
             </h2>
 
