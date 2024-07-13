@@ -9,7 +9,7 @@ const ChooseLanguage = ()=>{
     changeLanguage(selectedLanguage)
   }
     return(
-    <Form onChange={handleLanguage}>
+    <Form onChange={handleLanguage} id="choose-language">
      <Form.Select size="sm" className="choose-language">
         <option value={"pt"}>Português</option>
         <option value={"en"}>English</option>

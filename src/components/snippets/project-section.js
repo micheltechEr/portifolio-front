@@ -6,7 +6,7 @@ import useIntersectionObserver from '../../functions/useInfiniteScroll'
 import { useTranslation } from 'react-i18next';
 
 const ProjectSection = ()=>{
-    const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });
+    const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.3 });
     const {t} = useTranslation()
 
     return(

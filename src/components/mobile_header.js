@@ -1,23 +1,31 @@
 import React from 'react'
 import ToggleBurguer from './snippets/toggle-burguer'
+import SwitchToggle from './snippets/switchtoggle'
+import ChooseLanguage from './translation/translationComponent'
+import { useTranslation } from 'react-i18next';
 
-const header_mobile = ()=>{
+const HeaderMobile = ()=>{
+    const { t } = useTranslation();
+
     return(    
     <header class="portifolio-header-mobile">
     <ToggleBurguer/>
     
     <ul className='flex'>
-    <li>
-                <a href='#personal-projects'>PROJETOS PESSOAIS</a>
+            <SwitchToggle/>
+            <ChooseLanguage/>
+
+            <li>
+                <a href='#personal-projects'>{t('menu.personal-projects')}</a>
             </li>
             <li>
-                <a href='#curriculum-section'>PORTIFÓLIO</a>
+                <a href='#curriculum-section'>{t('menu.portifolio')}</a>
             </li>
             <li>
-                <a href='#about-me-text'>SOBRE</a>
+                <a href='#about-me-text'>{t('menu.about')}</a>
             </li>
             <li>
-                <a href='#contact-me'>CONTATO</a>
+                <a href='#contact-me'>{t('menu.contact')}</a>
             </li>
     </ul>
 
@@ -25,5 +33,6 @@ const header_mobile = ()=>{
 
 }
 
-export default header_mobile
+export default HeaderMobile
+
 

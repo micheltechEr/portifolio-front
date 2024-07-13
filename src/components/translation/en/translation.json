@@ -21,13 +21,17 @@
   "portifolioL":{
     "portifolio":"Portifolio",
     "curriculum":"Curriculum",
-    "description":"Here, I have listed my academic background and technical skills. As I improve, I add new skill 'objects'"
+    "description":"Here, I have listed my academic background and technical skills. As I improve, I add new skill 'objects'",
+    "changeImageText":"Clique aqui para aumentar a imagem"
   },
     
     "aboutMe": {
       "title": "About Me",
       "greeting": "Hello, everyone!",
       "description": "I am Ângelo Miguel from Amélia Rodrigues, Bahia, 24 years old with a pure passion for technology. Graduated in Information Systems and working as a front-end developer, I am always ready to dive headfirst into new challenges."
+    },
+    "contact":{
+      "title-section":"Contact"
     }
   }
   
