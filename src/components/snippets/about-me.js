@@ -16,7 +16,7 @@ const AboutMe = () => {
         </h3>
       </div>
       <div className="about-me-image">
-        <img src={profilecurriculum} alt="profile-picture-curriculum" />
+        <img src={profilecurriculum} alt="profile-curriculum" />
       </div>
     </div>
   )

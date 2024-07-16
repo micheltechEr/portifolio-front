@@ -21,8 +21,8 @@ const ProjectSection = ()=>{
                     <div className="item">
                         <span>&#123;APOD&#125;</span>
                         <div className="project-image">
-                            <a href="https://daily-apod-nasa.vercel.app/" target="_blank">
-                            <img src={APODImage}/>   
+                            <a href="https://daily-apod-nasa.vercel.app/" rel="noreferrer" target="_blank">
+                            <img src={APODImage} alt="apod-project"/>   
                             </a>
                                       
                         </div>
@@ -30,16 +30,16 @@ const ProjectSection = ()=>{
                     <div className="item">
                         <span>&#123;Clone Home Netflix&#125;</span>
                         <div className="project-image">
-                            <a href="https://netflix-clone-dio-sigma.vercel.app/">
-                            <img src={NetflixClone}/> 
+                            <a href="https://netflix-clone-dio-sigma.vercel.app/" rel="noreferrer" target="_blank">
+                            <img src={NetflixClone} alt="netlix-clone"/> 
                             </a>             
                         </div>
                     </div>
                     <div className="item">
                         <span>&#123;ForBarber&#125;</span>
                         <div className="project-image">
-                            <a href="https://github.com/micheltechEr/forbarber">
-                            <img src={ForBarber}/>             
+                            <a href="https://github.com/micheltechEr/forbarber" rel="noreferrer" target="_blank">
+                            <img src={ForBarber} alt="for-barber"/>             
                             </a>
                         </div>
                     </div>

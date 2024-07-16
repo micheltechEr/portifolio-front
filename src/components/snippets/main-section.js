@@ -10,7 +10,7 @@ const Mainsection= () =>{
             <div className="main-info flex">
                 <h1 className="title">Ângelo Miguel</h1>
                 <MainSubTitle isEnglish={languageAtr} />
-                <a href="https://www.linkedin.com/in/angelo-miguel-rib-cerq/" target="_blank" className="button contact">&lt;{t('buttonText.text')}/&gt;</a>
+                <a href="https://www.linkedin.com/in/angelo-miguel-rib-cerq/"  rel="noreferrer" target="_blank" className="button contact">&lt;{t('buttonText.text')}/&gt;</a>
             </div>
             <div className="banner-home flex">
                 <img src={bannerhome} alt="banner-home"/>
