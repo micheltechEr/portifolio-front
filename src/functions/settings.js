@@ -1,29 +1,59 @@
+import { useEffect } from "react";
+
 const showMobileMenu = () => {
-    window.addEventListener("load", function() {
-        const showMenu = ()=>{
+    useEffect(() => {
+        const showMenu = () => {
             document.querySelector('.portifolio-header-mobile ul').classList.add('active');
             document.querySelector('.shadowEffect').classList.add('shadowOn');
             document.querySelector('.toggle-burger').style.display = 'none';
-        }
-    
-        const hideMenu = ()=>{
+        };
+
+        const hideMenu = () => {
             let menu = document.querySelector('.portifolio-header-mobile ul');
             menu.classList.remove('active');
-                document.querySelector('.shadowEffect').classList.remove('shadowOn');
-                document.querySelector('.toggle-burger').style.display = 'block';
+            document.querySelector('.shadowEffect').classList.remove('shadowOn');
+            document.querySelector('.toggle-burger').style.display = 'block';
+        };
+
+        const burger = document.querySelector('.toggle-burger svg');
+        const shadow = document.querySelector('.shadowEffect');
+
+        if (burger) {
+            burger.addEventListener('click', showMenu);
         }
-        document.querySelector('.toggle-burger svg').addEventListener('click', showMenu);
-        document.querySelector('.shadowEffect').addEventListener('click', hideMenu);
-    });
+
+        if (shadow) {
+            shadow.addEventListener('click', hideMenu);
+        }
+
+        return () => {
+            if (burger) {
+                burger.removeEventListener('click', showMenu);
+            }
+            if (shadow) {
+                shadow.removeEventListener('click', hideMenu);
+            }
+        };
+    }, []);
 };
 
 const zoomImage = () => {
-    window.addEventListener("load", function() {
-        document.querySelector('.hidden_box').onclick=function(){
-        document.querySelector('.curriculum-section .box-image img').classList.toggle('active-zoom')
+    useEffect(() => {
+        const hiddenBox = document.querySelector('.hidden_box');
+        const image = document.querySelector('.curriculum-section .box-image img');
+
+        if (hiddenBox && image) {
+            const toggleZoom = () => {
+                image.classList.toggle('active-zoom');
+            };
+
+            hiddenBox.addEventListener('click', toggleZoom);
+
+            return () => {
+                hiddenBox.removeEventListener('click', toggleZoom);
+            };
         }
-    })
-}
+    }, []);
+};
 
-export {showMobileMenu,zoomImage}
-
+export { showMobileMenu, zoomImage };
