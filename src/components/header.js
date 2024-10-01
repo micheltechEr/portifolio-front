@@ -6,7 +6,7 @@
     const Header = ()=>{
         const { t } = useTranslation();
         return(    
-        <header class="portifolio-header">
+        <header className="portifolio-header">
         <ul className='flex'>
             <li>
                 <a href='#personal-projects'>{t('menu.personal-projects')}</a>

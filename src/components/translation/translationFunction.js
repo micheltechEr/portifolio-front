@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 
-export const changeLanguage = (language) => {
-  i18n.changeLanguage(language);
-  document.querySelector('html').setAttribute('lang',language)
+export const changeLanguage = (lng) => {
+  i18n.changeLanguage(lng);
+  localStorage.setItem('site-language', lng);
 };
+

@@ -8,7 +8,7 @@ const HeaderMobile = ()=>{
     const { t } = useTranslation();
 
     return(    
-    <header class="portifolio-header-mobile">
+    <header className="portifolio-header-mobile">
     <ToggleBurguer/>
     
     <ul className='flex'>

@@ -11,13 +11,14 @@ const resources = {
     translation: translationPT
   }
 };
+const localLanguage = localStorage.getItem('site-language') || 'pt';
 
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'pt',
-    fallbackLng: 'en',
+    lng: localLanguage,
+    fallbackLng: ['en','pt'],
     interpolation: {
       escapeValue: false
     }
