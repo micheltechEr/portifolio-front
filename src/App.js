@@ -4,7 +4,6 @@ import Body from './components/body'
 import Footer from './components/footer';
 import "../src/styles/index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {showMobileMenu} from "../src/functions/settings";
 
 function App() {
   return (
@@ -13,7 +12,6 @@ function App() {
       <Header/>
       <Body/>
       <Footer/>
-      {showMobileMenu()}
     </div>
   );
 

@@ -48,8 +48,17 @@
     transform: translate(23px, -2px);
   }
   
-  .bi-moon {
+
+  .form-switch .form-check-input{
+    z-index: 10;
+    width: 3rem !important;
+    height: 2rem;
+    margin-top: 0;
+  }
+  
+ .bi-moon-fill {
     color: #f1c40f;
+    transform: translate(23px, 0px);
   }
   
   .bi-sun {
