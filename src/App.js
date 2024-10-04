@@ -1,16 +1,20 @@
 import Header from './components/header'
 import MobileHeader from './components/mobile_header'
-import Body from './components/body'
+import BodyProject from './components/body'
 import Footer from './components/footer';
 import "../src/styles/index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useMobileMenu } from "../src/functions/mobileBurguer";
+
 
 function App() {
+  const { isMenuVisible, showMenu, hideMenu } = useMobileMenu();
+
   return (
     <div className="project-content">
-      <MobileHeader/>
+      <MobileHeader isMenuVisible={isMenuVisible} showMenu={showMenu} />
       <Header/>
-      <Body/>
+      <BodyProject isMenuVisible={isMenuVisible} hideMenu={hideMenu}/>
       <Footer/>
     </div>
   );
