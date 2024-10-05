@@ -25,5 +25,10 @@ html[site-mode="dark"] .choose-language {
     }
     .portifolio-header-mobile ul.active #choose-language{
         position: relative;
+        width: 130px;
+    }
+    .portifolio-header-mobile ul.active form.toggle-theme {
+        top: 20px;
+        left: 36px;
     }
 }

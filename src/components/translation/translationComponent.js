@@ -5,21 +5,21 @@ import { changeLanguage } from "../translation/translationFunction";
 import useLanguageMode from '../../functions/useLanguageMode';
 
 const ChooseLanguage = () => {
-  const [isChecked, setIsChecked] = useLanguageMode();
+  const [isChecked, setIsChecked] = useLanguageMode(false);
 
   const handleLanguageChange = (event) => {
     const selectedLanguage = event.target.value;
     changeLanguage(selectedLanguage);
-    
     setIsChecked(selectedLanguage === 'pt'); 
   };
 
+  console.log('Passo 1',isChecked)
   return (
     <Form id="choose-language">
       <Form.Select 
         size="sm" 
         className="choose-language" 
-        value={isChecked ? 'pt' : 'en'} 
+        value={isChecked ? 'en' : 'pt'} 
         onChange={handleLanguageChange}
       >
         <option value="pt">Português</option>

@@ -7,7 +7,7 @@ const AboutMe = () => {
   const [sectionRef, isVisible] = useIntersectionObserver({ threshold: 0.5 });
 
   return (
-    <div ref={sectionRef} className={`section ${isVisible ? "visible" : ""} about-me`} id="about-me">
+    <div ref={sectionRef} className={`section ${isVisible ? " visible" : ""} about-me`} id="about-me">
       <div className="about-me-text" id="about-me-text">
         <h2>{t('aboutMe.title')}</h2>
         <h3>

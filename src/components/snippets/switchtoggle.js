@@ -6,9 +6,8 @@ import useDarkMode from "../../functions/useDarkMode";
 
 const SwitchToggle = () => {
   const [isChecked, handleToggle] = useDarkMode();  
-  console.log("SwitchToggle - isChecked:", isChecked);
   return (
-    <Form>
+    <Form  className="toggle-theme">
       <Form.Check
         type="switch"
         id="custom-switch"

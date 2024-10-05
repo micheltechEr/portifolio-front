@@ -10,7 +10,7 @@ const ProjectSection = ()=>{
     const {t} = useTranslation()
 
     return(
-        <div  ref={sectionRef} className={`section${isVisible?"visible":""} personal-projects`} id="personal-projects">
+        <div  ref={sectionRef} className={`section${isVisible?" visible":""} personal-projects`} id="personal-projects">
             <h2>
                 {t('personalProjects.personalProjectsText')}
                 <span className="arrows">&larr;	&rarr;</span>
