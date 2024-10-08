@@ -5,7 +5,7 @@ const useLanguageMode = () => {
   const [isChecked, setIsChecked] = useState(() => {
     const storedMode = localStorage.getItem('site-language');
     return storedMode === 'pt' || (storedMode === null && osLanguageMode === 'pt');
-  });
+  })
 
   const isFirstLoad = useRef(true);
 
