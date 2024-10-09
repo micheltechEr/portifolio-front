@@ -12,14 +12,12 @@ const ChooseLanguage = () => {
     changeLanguage(selectedLanguage);
     setIsChecked(selectedLanguage === 'pt'); 
   };
-
-  console.log('Passo 1',isChecked)
   return (
     <Form id="choose-language">
       <Form.Select 
         size="sm" 
         className="choose-language" 
-        value={isChecked ? 'en' : 'pt'} 
+        value={isChecked ? 'pt' : 'en'} 
         onChange={handleLanguageChange}
       >
         <option value="pt">Português</option>

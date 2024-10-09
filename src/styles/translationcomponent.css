@@ -24,6 +24,7 @@ html[site-mode="dark"] .choose-language {
         padding: .375rem 0.25rem .375rem 0.25rem !important;
     }
     .portifolio-header-mobile ul.active #choose-language{
+        
         position: relative;
         width: auto;
     }

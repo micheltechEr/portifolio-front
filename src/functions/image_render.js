@@ -4,7 +4,6 @@ import contact from '../../src/img/contact.png'
 import encontact from '../../src/img/en_contact.png'
 
    export  const ImageRenderCurriculum = ({ isEnglish }) => {
-    console.log('Current ',isEnglish)
        if (isEnglish === 'en') {
            return <img src={curriculumEngl} className="curriculum-image" alt="Curriculum Im" />
        }
